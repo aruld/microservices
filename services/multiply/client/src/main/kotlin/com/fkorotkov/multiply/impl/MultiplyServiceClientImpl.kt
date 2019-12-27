@@ -3,7 +3,7 @@ package com.fkorotkov.multiply.impl
 import com.fkorotkov.multiply.MultiplyServiceClient
 import com.fkorotkov.services.multiply.grpc.CalculateRequest
 import com.fkorotkov.services.multiply.grpc.MultiplyGrpc
-import kotlinx.coroutines.experimental.guava.await
+import kotlinx.coroutines.guava.await
 
 class MultiplyServiceClientImpl(val service: MultiplyGrpc.MultiplyFutureStub) : MultiplyServiceClient {
   override suspend fun calculate(a: Long, b: Long): Long {
